@@ -1,50 +1,51 @@
 import java.util.Scanner;
-class DateInput{
- 	private int day;
+
+class DateInput {
+	private int day;
 	private int month;
 	private int year;
-	
-	DateInput(){
-	}
-	
-	DateInput(int day,int month,int year){
-	this.day = day;
-	this.month =month;
-	this.year =year; 
-	
+
+	DateInput() {
 	}
 
-	public int getDay(){
-	return this.day;
+	DateInput(int day, int month, int year) {
+		this.day = day;
+		this.month = month;
+		this.year = year;
+
 	}
 
-	public void setDay(int day){
-	this.day = day;
+	public int getDay() {
+		return this.day;
 	}
 
-	public int getMonth(){
-	return this.month;
+	public void setDay(int day) {
+		this.day = day;
 	}
 
-	public void setMonth(int month){
-	this.month = month;
+	public int getMonth() {
+		return this.month;
 	}
-	
-	public int getYear(){
-	return this.year;
-	}
-	
-	public void setYear(int year){
-	this.year = year;
-	} 
 
-	public String toString(){
-	return (this.day+"-"+this.month+"-"+this.year);	
+	public void setMonth(int month) {
+		this.month = month;
+	}
+
+	public int getYear() {
+		return this.year;
+	}
+
+	public void setYear(int year) {
+		this.year = year;
+	}
+
+	public String toString() {
+		return (this.day + "-" + this.month + "-" + this.year);
 	}
 }
 
-public class AgeCalculator{
-//code for finding age of person from his date of birth
+public class AgeCalculator {
+	// code for finding age of person from his date of birth
 	public static void main(String[] args){
 	
 	//objects for use
@@ -83,28 +84,27 @@ public class AgeCalculator{
 	//07-12-2025
 	//11-12-2001
 
-	public void compareDates(DateInput currentDate, DateInput dob){
-	 private int years = 0;
-	 private int month = 0;
-	 private int days = 0;
-		if (currentDate.getYear() > dob.getYear() && dob.getYear() > 1900 
-			&& dob.getMonth() >0 && currentDate.getMonth() > 0){
-			if(currentDate.getMonth() > dob.getMonth()){
-				year = currentDate.getYear() - dob.getYear();
-			}else if(currentDate.getMonth() < dob.getMonth()){
-				year = currentDate.getYear() - dob.getYear()-1;
-			}else if(currentDate.getMonth() = dob.getMonth()){
-				if(currentDate.getDay()<dob.getDay()){
-				year = currentDate.getYear() - dob.getYear()-1;
-				
-			}
-		}else{
-		System.out.println("Enter a valid Date");
-		}
-	
-	
-	System.out.println("Your Age is: "+ years+"Years "+month+ " Months "+ days+" Days.");
+	public void compareDates(DateInput currentDate, DateInput dob) {
 
-	
+	private int years = 0;
+	private int month = 0;
+	private int days = 0;
+	if(currentDate.getYear()>dob.getYear()&&dob.getYear()>1900&&dob.getMonth()>0&&currentDate.getMonth()>0)
+	{
+		if (currentDate.getMonth() > dob.getMonth()) {
+			year = currentDate.getYear() - dob.getYear();
+		} else if (currentDate.getMonth() < dob.getMonth()) {
+			year = currentDate.getYear() - dob.getYear() - 1;
+		} else if (currentDate.getMonth() = dob.getMonth()) {
+			if (currentDate.getDay() < dob.getDay()) {
+				year = currentDate.getYear() - dob.getYear() - 1;
+
+			}
+		} else {
+			System.out.println("Enter a valid Date");
+		}
+
+		System.out.println("Your Age is: " + years + "Years " + month + " Months " + days + " Days.");
+
 	}
 }
