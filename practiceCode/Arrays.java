@@ -123,8 +123,8 @@ class Arrays {
 		int b[] = { 10, 20, 20, 30, 30, 40, 50, 50, 60 };
 		// int largest = findLargestElement(a);
 
-		removeDuplicates(b);
-		printAnArray(b);
+		// removeDuplicates(b);
+		// printAnArray(b);
 		int i = 100;
 		int j = 0;
 
@@ -134,19 +134,14 @@ class Arrays {
 				throw new MathExceptions("There must be a remider");
 
 			}
-
 		} catch (MathExceptions m) {
 			System.out.println("Mathematical Exception Occured" + m);
 		} catch (Exception e) {
 			System.out.println("Something went wrong" + e);
-
 		}
-		String s1 = "radhe";
-		String s2 = "mahesh";
+		
+		
 
-		System.out.println(s1 == s2);
-		System.out.println(s1.hashCode());
-		System.out.println(s2.hashCode());
 
 	}
 
