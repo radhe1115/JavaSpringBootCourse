@@ -1,3 +1,8 @@
+class MathExceptions extends Exception{
+public MathExceptions(String error){
+	super(error);
+}
+}
 class Arrays {
 	public static int findLargestElement(int[] a) {
 		// complexity of this function is O(n)
@@ -111,6 +116,7 @@ class Arrays {
 		return arr;
 	}
 
+
 	public static void main(String[] args) {
 		// find largest Element
 		int a[] = { 90, 43, 54, 21, 0, 0, 65, 87, 0, 98, 21, 0, 32 };
@@ -119,7 +125,23 @@ class Arrays {
 
 		removeDuplicates(b);
 		printAnArray(b);
+		int i =100;
+		int j = 0;
+	
 
+	try{
+		j = i/0;
+		if(j==0){
+		throw new MathExceptions("There must be a remider");
+
+		}
+
+	}catch(MathExceptions m){
+		System.out.println("Mathematical Exception Occured"+m);
+	}catch(Exception e){
+		System.out.println("Something went wrong"+e);
+
+		}
 		String s1 = "radhe";
 		String s2 = "mahesh";
 
@@ -127,5 +149,9 @@ class Arrays {
 		System.out.println(s1.hashCode());
 		System.out.println(s2.hashCode());
 
+
+		
+
 	}
+
 }
