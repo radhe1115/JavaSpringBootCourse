@@ -79,13 +79,22 @@ public class CollectionExplore{
 
     System.out.println("================using Comparator Interface ==================");
 
-    Comparator<Student> com =   new Comparator<Student>() {
+/*     Comparator<Student> com =   new Comparator<Student>() {
       public int compare(Student i, Student j){
-              return (i.age>j.age)?1:-1;
+              if (i.age>j.age)
+                return 1;
+              else 
+                return -1;
       }
     };
 
-        Collections.sort(stud,com);
+    all this code can be reduced to single line using java 8 features
+    */
+  Comparator<Student> com = ( i,  j)->{ return (i.age>j.age)?1:-1; };
+  Collections.sort(stud,com);
+  
+  for(Student st :stud)
+  System.out.println(st);
 
 
 
