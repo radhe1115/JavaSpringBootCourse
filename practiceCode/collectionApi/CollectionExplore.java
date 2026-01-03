@@ -1,10 +1,14 @@
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 
 
@@ -90,13 +94,29 @@ public class CollectionExplore{
 
     all this code can be reduced to single line using java 8 features
     */
-  Comparator<Student> com = ( i,  j)->{ return (i.age>j.age)?1:-1; };
+  Comparator<Student> com = (i,j)->{ return (i.age>j.age)?1:-1; };
   Collections.sort(stud,com);
   
   for(Student st :stud)
   System.out.println(st);
 
+    System.out.println("---------------------------------------");
+        List<String> names = Arrays.asList("Alice", "Bob", "Alice", "David", "Bob");
+        
+        // TODO: Print the original list
+        System.out.println("Original List:"+ names);
 
+        // TODO: Convert the list to a LinkedHashSet to remove duplicates while preserving order
+        
+        Set<String> newHashSet =  new HashSet(); //object of type Set implemented using HashSet 
+        newHashSet.addAll(names);
+        System.out.println("New List Using HashSet: "+newHashSet);
+
+        Set<String> newSet = new LinkedHashSet<>(); // original order in which objects are stored in set.
+        newSet.addAll(names);
+        System.out.println("New List using LinkedHashSet: "+ newSet);
+
+        // TODO: Print the set of unique names
 
 
 

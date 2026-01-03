@@ -1,0 +1,7 @@
+List  of Functional interfaces I have used So far
+
+Runnable
+Comparator
+Consumer - Used in for accessing objects of collection one by one
+Predicate - Extensively used in Streams - to compare integer value and has method test(Integer)
+Function 

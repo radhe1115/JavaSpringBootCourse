@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="jdbcDemo/jdbcdemo/src/main/java"/>
+	<classpathentry excluding="collectionApi/" kind="src" path="practiceCode"/>
+	<classpathentry kind="src" path="practiceCode/collectionApi"/>
+	<classpathentry kind="output" path="jdbcDemo/jdbcdemo/target/classes"/>
+</classpath>
