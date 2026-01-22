@@ -1,8 +1,15 @@
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
+import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.stream.Stream;
 
-
+class ImplPredicate implements Predicate<Integer>{
+  @Override
+  public boolean test(Integer n){
+    return n%2==0;
+  }
+  
+}
 public class StreamApi {
   public static void main(String[] args) {
     List<Integer>  numList =  Arrays.asList(77,76,97,42,43,65,21,98);
@@ -43,8 +50,13 @@ public class StreamApi {
     // };
 
     // Stream<Integer> s3 = s2.map(n -> n*2);
-         Stream<Integer>  s1 = numList.stream().filter(n -> n%2!=0).sorted();
-         s1.forEach(n -> System.out.println(n));
+         Stream<Integer>  s1 = numList.stream();
 
+        ImplPredicate obj = new ImplPredicate();
+        s1.filter(obj);
+
+         Function objFunction = new Function<T,R>() {
+          
+         };
   }
 }
